@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "~bootstrap/scss/bootstrap";
+.vue-typer .custom.char.typed{
+  color:white;
+}
+body {
+  font-family: Arial, "PingFang TC", sans-serif;
+  background: #f7f7f7;
+}
