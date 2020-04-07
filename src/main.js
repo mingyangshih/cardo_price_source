@@ -26,14 +26,6 @@ extend('required', {
   ...required,
   message: messages.required,
 });
-extend('minmax', {
-  validate: (value, args) => {
-    const { length } = value;
-    return length >= args.min && length <= args.max;
-  },
-  params: ['min', 'max'],
-  message: '有字數限制',
-});
 
 
 Vue.config.productionTip = false;

@@ -9,14 +9,43 @@ const routes = [
     path: '/',
     name: 'login',
     component: login,
+    children: [
+      {
+        path: '/',
+        name: 'loginbox',
+        component: () => import('../components/login/loginbox.vue'),
+      },
+      {
+        path: 'forgetpassword',
+        name: 'forgetpassword',
+        component: () => import('../components/login/forgetpassword.vue'),
+      },
+      {
+        path: 'enterverifycode',
+        name: 'enterverifycode',
+        component: () => import('../components/login/enterverifycode.vue'),
+      },
+      {
+        path: 'loginresetpassword',
+        name: 'loginresetpassword',
+        component: () => import('../components/login/loginresetpassword.vue'),
+      },
+    ],
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/voucherstoresearch',
+    name: 'voucherstoresearch',
+    component: () => import('../views/voucherstoresearch.vue'),
+  },
+  {
+    path: '/voucherstorelist',
+    name: 'voucherstorelist',
+    component: () => import('../views/voucherstorelist.vue'),
+  },
+  {
+    path: '/voucherstorelistdetail',
+    name: 'voucherstorelistdetail',
+    component: () => import('../views/voucherstorelistdetail.vue'),
   },
 ];
 

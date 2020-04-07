@@ -81,13 +81,18 @@ $theme-colors: map-merge(
   (
     "primary":    #3B44A9,//$primary,
     "secondary":  $secondary,
-    "success":    $success,
+    "success":    #078432,//$success,
     "info":       $info,
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
     "dark":       $dark,
     "log":        #1B79F4,
+    "tbprimary": #2D3486,
+    "tbsecondary": #3B44A9,
+    "tbthird": #7687B4,
+    "orange": #F45029,
+    "lightgray" : #c1c1c1
 
   ),
   $theme-colors
@@ -147,7 +152,9 @@ $spacers: map-merge(
     3: $spacer,
     4: ($spacer * 1.5),
     5: ($spacer * 3),
+    20: 20px,
     30: 30px,
+    40: 40px,
     8: 80px
   ),
   $spacers
