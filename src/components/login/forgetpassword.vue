@@ -3,7 +3,7 @@
     .FGPInput
       .top.d-flex.justify-content-between
         router-link(to="/" class="topbox text-decoration-none") <i class="fas fa-arrow-left"></i>
-        router-link(to="" class="topbox text-decoration-none") <i class="fas fa-times"></i>
+        router-link(to="/" class="topbox text-decoration-none") <i class="fas fa-times"></i>
       .forgetpasswordpic.d-flex.justify-content-center.align-items-center.mt-5.flex-column
         img(src="../../assets/img/login/forgetpassword.png")
         h3.text-white.mt-4 忘記密碼

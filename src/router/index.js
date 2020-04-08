@@ -47,6 +47,16 @@ const routes = [
     name: 'voucherstorelistdetail',
     component: () => import('../views/voucherstorelistdetail.vue'),
   },
+  {
+    path: '/shoplist',
+    name: 'shoplist',
+    component: () => import('../views/shoplist.vue'),
+  },
+  {
+    path: '/shoptotalinfo',
+    name: 'shoptotalinfo',
+    component: () => import('../views/shoptotalinfo.vue'),
+  },
 ];
 
 const router = new VueRouter({

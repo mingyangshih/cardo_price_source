@@ -4,7 +4,7 @@
       router-link(to="/voucherstoresearch" :class="{active : activeNav === '票券庫存查詢'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
         <img src="../assets/img/nav/voucherstoresearch.png" class="mr-2"> 票券庫存查詢
     div( @click="activeNav = '商家資料建立與總表'")
-      router-link(to="" :class="{active : activeNav === '商家資料建立與總表'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
+      router-link(to="/shoplist" :class="{active : activeNav === '商家資料建立與總表'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
         <img src="../assets/img/nav/shopdata.png" class="mr-2"> 商家資料建立與總表
     p.mb-0.text-white.ml-auto Hi, XXX
     router-link(to='/').text-decoration-none.btn.btn-light.p-0 Log Out

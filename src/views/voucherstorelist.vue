@@ -154,12 +154,6 @@ export default {
         background: #F45029;
         color:#EFECEC;
       }
-      &.first{
-        // border-radius: 5px 0 0 0;
-      }
-      &.last{
-        // border-radius: 0 5px 0 0;
-      }
     }
   }
   tbody{
