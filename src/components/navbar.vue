@@ -6,8 +6,14 @@
     div( @click="activeNav = '商家資料建立與總表'")
       router-link(to="/shoplist" :class="{active : activeNav === '商家資料建立與總表'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
         <img src="../assets/img/nav/shopdata.png" class="mr-2"> 商家資料建立與總表
-    p.mb-0.text-white.ml-auto Hi, XXX
-    router-link(to='/').text-decoration-none.btn.btn-light.p-0 Log Out
+    .nickName.ml-auto 暱
+      .nickNameBox.flex-column
+        p.mb-20.insideNickName 暱
+        p.text-dark.font-weight-bold.mb-2.name 王曉明
+        p.text-dark.font-weight-bold.name wang@mail.com.tw
+        hr
+        router-link(to="/").btn.btn-outline-log.btnStyle.mb-3.d-flex.justify-content-center.align-items-center 變更密碼
+        router-link(to="/").btn.btn-log.btnStyle.d-flex.justify-content-center.align-items-center.text-light 登出帳戶
 </template>
 
 <script>
@@ -52,9 +58,74 @@ export default {
       box-shadow: 0px 3px 6px #00000029;
       border-radius: 15px;
       font-size: 14px;
-      color:#3343F7;
-      font-weight: bold;
-      margin-left: 50px;
     }
+  }
+  // nickname
+  .nickName{
+    font-size: 24px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 50%;
+    border:2px solid white;
+    position:relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover{
+      color:rgba(256,256,256,.4);
+      border: 2px solid rgba(256,256,256,.4);
+      .nickNameBox{
+        display: flex;
+      }
+    }
+  }
+  .nickNameBox{
+    position:absolute;
+    top:48px;
+    right:15px;
+    background: white;
+    width: 340px;
+    height: 360px;
+    display:none;
+    align-items: center;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 0.5px solid #C3D0DC;
+    border-radius: 3px;
+    padding-top: 40px;
+    z-index: 10000000;
+    hr{
+      width: 100%;
+      border-top: 1px solid #C3D0DC;
+      margin-bottom: 24px;
+    }
+    .btnStyle{
+      width: 140px;
+      height: 39px;
+      border-radius: 23px;
+      margin-left: 0;
+      color: #1b79f4;
+      border-width: 2px;
+      &:hover{
+        color: white;
+      }
+    }
+    .name{
+      font-size: 16px;
+    }
+  }
+  .insideNickName{
+    font-size: 24px;
+    color: #C3D0DC;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 50%;
+    border:2px solid #2F7BFB;
+    position:relative;
   }
 </style>
