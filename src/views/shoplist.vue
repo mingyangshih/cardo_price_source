@@ -70,7 +70,7 @@ export default {
   }
   tbody{
     td{
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       height: 65px;
       vertical-align: middle;

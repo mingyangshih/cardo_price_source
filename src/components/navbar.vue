@@ -6,6 +6,18 @@
     div( @click="activeNav = '商家資料建立與總表'")
       router-link(to="/shoplist" :class="{active : activeNav === '商家資料建立與總表'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
         <img src="../assets/img/nav/shopdata.png" class="mr-2"> 商家資料建立與總表
+    div( @click="activeNav = '角色建立'")
+      router-link(to="/buildcharacter" :class="{active : activeNav === '角色建立'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
+        <img src="../assets/img/nav/buildcharacter.png" class="mr-2"> 角色建立
+    div( @click="activeNav = '管理使用者'")
+      router-link(to="/adminuser" :class="{active : activeNav === '管理使用者'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
+        <img src="../assets/img/nav/adminuser.png" class="mr-2"> 管理使用者
+    div( @click="activeNav = '價金票券商品查詢'")
+      router-link(to="/vouchersearch" :class="{active : activeNav === '價金票券商品查詢'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
+        <img src="../assets/img/nav/vouchersearch.png" class="mr-2"> 價金票券商品查詢
+    div( @click="activeNav = 'Log異動查詢'")
+      router-link(to="/shoplist" :class="{active : activeNav === 'Log異動查詢'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
+        <img src="../assets/img/nav/loglogo.png" class="mr-2"> Log異動查詢
     .nickName.ml-auto 暱
       .nickNameBox.flex-column
         p.mb-20.insideNickName 暱

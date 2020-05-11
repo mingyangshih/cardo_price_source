@@ -2,13 +2,19 @@
   .searchbar.d-flex.align-items-center
     .searchBarContent.d-flex.align-items-center
       p.mb-0.title(v-if="toggle && location === '#/voucherstorelist'") 票券狀態
+      p.mb-0.title(v-if="toggle && location === '#/voucherlist'") 票券上架狀態
       .btn-group.btn-group-sm.btn-outline-group.btn-group-toggle.mx-2(v-if="toggle && location === '#/voucherstorelist'")
         button.btn.btn-outline-log.font-weight-bold.first(@click="multiselect(['all','unused','used','due','cantuse'])" :class="{'bg-primary' : filterStatus.length === 5, 'text-white' : filterStatus.length === 5}") 全部
         button.btn.btn-outline-log.font-weight-bold(@click="checkInclude('unused')" :class="{'bg-primary' : filterStatus.includes('unused'), 'text-white' : filterStatus.includes('unused')}") 未使用
         button.btn.btn-outline-log.font-weight-boldd(@click="checkInclude('used')" :class="{'bg-primary' : filterStatus.includes('used'), 'text-white' : filterStatus.includes('used')}") 已使用
         button.btn.btn-outline-log.font-weight-boldd(@click="checkInclude('due')" :class="{'bg-primary' : filterStatus.includes('due'), 'text-white' : filterStatus.includes('due')}") 已到期
         button.btn.btn-outline-log.font-weight-bold.last(@click="checkInclude('cantuse')" :class="{'bg-primary' : filterStatus.includes('cantuse'), 'text-white' : filterStatus.includes('cantuse')}") 已作廢
-      p.mb-0.title(v-if="toggle") 票券價金保管期間（待確定）
+      //- voucherlist
+      .btn-group.btn-group-sm.btn-outline-group.btn-group-toggle.mx-2(v-if="toggle && location === '#/voucherlist'")
+        button.btn.btn-outline-log.font-weight-bold.first(@click="multiselect(['all','selling','soldout'])" :class="{'bg-primary' : filterStatus.length === 3, 'text-white' : filterStatus.length === 3}") 全部
+        button.btn.btn-outline-log.font-weight-bold(@click="checkInclude('selling')" :class="{'bg-primary' : filterStatus.includes('selling'), 'text-white' : filterStatus.includes('selling')}") 上架
+        button.btn.btn-outline-log.font-weight-boldd.last(@click="checkInclude('soldout')" :class="{'bg-primary' : filterStatus.includes('soldout'), 'text-white' : filterStatus.includes('soldout')}") 已下架
+      p.mb-0.title.mr-3(v-if="toggle") 期間
       input.form-control.mr-2(type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" v-if="toggle")
       input.form-control.mr-2(type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" v-if="toggle")
       button.toggleBtn.btn.font-weight-bold(:class="{'false' : !toggle,'true' : toggle}" @click="toggle = !toggle") +篩選
@@ -16,6 +22,7 @@
     label.mb-0
       input.form-control(type="text" placeholder="搜尋商家或商家統一編號" v-if="location === '#/voucherstoresearch'")
       input.form-control(type="text" placeholder="搜尋交易訂單編號或票券編號" v-if="location === '#/voucherstorelist'")
+      input.form-control(type="text" placeholder="搜尋票券商品名稱" v-if="location === '#/voucherlist'")
 </template>
 
 <script>
@@ -114,6 +121,10 @@ export default {
     box-sizing: border-box;
     border: 1px solid #82B3F4;
     font-size: 14px;
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      display: none;
+    }
   }
   // 篩選票券狀態btn group
   .btn-group{

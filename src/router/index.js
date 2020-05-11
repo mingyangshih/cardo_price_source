@@ -57,6 +57,26 @@ const routes = [
     name: 'shoptotalinfo',
     component: () => import('../views/shoptotalinfo.vue'),
   },
+  {
+    path: '/buildcharacter',
+    name: 'buildcharacter',
+    component: () => import('../views/buildcharacter.vue'),
+  },
+  {
+    path: '/adminuser',
+    name: 'adminuser',
+    component: () => import('../views/adminuser.vue'),
+  },
+  {
+    path: '/vouchersearch',
+    name: 'storelist',
+    component: () => import('../views/vouchersearch.vue'),
+  },
+  {
+    path: '/voucherlist',
+    name: 'voucherlist',
+    component: () => import('../views/voucherlist.vue'),
+  },
 ];
 
 const router = new VueRouter({
