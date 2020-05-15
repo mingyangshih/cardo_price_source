@@ -77,6 +77,33 @@ const routes = [
     name: 'voucherlist',
     component: () => import('../views/voucherlist.vue'),
   },
+  {
+    path: '/logsearch',
+    name: 'logsearch',
+    component: () => import('../views/logsearch.vue'),
+    children: [
+      {
+        path: '/',
+        name: 'loginbox',
+        component: () => import('../components/log/loginlog.vue'),
+      },
+      {
+        path: 'authoritylog',
+        name: 'authoritylog',
+        component: () => import('../components/log/authoritylog.vue'),
+      },
+      {
+        path: 'changelog',
+        name: 'changelog',
+        component: () => import('../components/log/changelog.vue'),
+      },
+    ],
+  },
+  {
+    path: '/resetpassword',
+    name: 'resetpassword',
+    component: () => import('../views/resetpassword.vue'),
+  },
 ];
 
 const router = new VueRouter({

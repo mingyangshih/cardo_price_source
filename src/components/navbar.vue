@@ -16,7 +16,7 @@
       router-link(to="/vouchersearch" :class="{active : activeNav === '價金票券商品查詢'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
         <img src="../assets/img/nav/vouchersearch.png" class="mr-2"> 價金票券商品查詢
     div( @click="activeNav = 'Log異動查詢'")
-      router-link(to="/shoplist" :class="{active : activeNav === 'Log異動查詢'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
+      router-link(to="/logsearch" :class="{active : activeNav === 'Log異動查詢'}").mb-0.text-decoration-none.font-weight-bold.text-white.link
         <img src="../assets/img/nav/loglogo.png" class="mr-2"> Log異動查詢
     .nickName.ml-auto 暱
       .nickNameBox.flex-column
@@ -24,7 +24,7 @@
         p.text-dark.font-weight-bold.mb-2.name 王曉明
         p.text-dark.font-weight-bold.name wang@mail.com.tw
         hr
-        router-link(to="/").btn.btn-outline-log.btnStyle.mb-3.d-flex.justify-content-center.align-items-center 變更密碼
+        router-link(to="/resetpassword").btn.btn-outline-log.btnStyle.mb-3.d-flex.justify-content-center.align-items-center 變更密碼
         router-link(to="/").btn.btn-log.btnStyle.d-flex.justify-content-center.align-items-center.text-light 登出帳戶
 </template>
 
